@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/admin_activity"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerinadminact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:requiresFadingEdge="vertical"
+        tools:listitem="@layout/cradview">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+    <LinearLayout
+        android:id="@+id/downmenulayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.06"
+        android:background="@drawable/downmenu"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+
+        <TextView
+            android:id="@+id/txtdelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background"
+            android:text="DELETE"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            />
+        <View
+            android:layout_width="5dp"
+            android:layout_height="0dp" />
+
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:id="@+id/txtpost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background"
+            android:text="POST"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+        <View
+            android:layout_width="5dp"
+            android:layout_height="0dp" />
+
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:id="@+id/txtNOTIF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background"
+            android:text="NOTIF"
+            android:textColor="@color/black"
+
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

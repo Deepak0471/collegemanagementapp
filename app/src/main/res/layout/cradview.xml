@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="8dp"
+    android:layout_margin="16dp"
+    android:id="@+id/Cardview"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="deepak"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:id="@+id/txt_title"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="description"
+            android:textColor="@color/black"
+            android:id="@+id/txt_description"
+            android:textStyle="normal"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="url"
+            android:id="@+id/txt_url"
+            android:textStyle="italic"
+            android:textColor="@color/blue"
+            android:linksClickable="true"
+            android:autoLink="web"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11-22-2021"
+            android:textColor="@color/red"
+            android:id="@+id/txt_date"
+            android:textStyle="italic"
+            />
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
