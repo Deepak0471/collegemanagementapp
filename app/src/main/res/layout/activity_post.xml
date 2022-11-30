@@ -6,7 +6,13 @@
     tools:context=".post"
     android:orientation="vertical"
     android:gravity="center">
-    
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="SIREAL NUMBER"
+        android:layout_margin="10dp"
+        android:id="@+id/etsino"/>
 
     <EditText
         android:layout_width="match_parent"

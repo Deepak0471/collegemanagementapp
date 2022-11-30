@@ -22,6 +22,7 @@ class post : AppCompatActivity(), View.OnClickListener {
     lateinit var etdescription : EditText
     lateinit var etdate : EditText
     lateinit var eturl : EditText
+    lateinit var etsino : EditText
     lateinit var btnpost : TextView
     lateinit var calendar : Calendar
     lateinit var btn_clock : ImageButton
@@ -42,6 +43,7 @@ class post : AppCompatActivity(), View.OnClickListener {
         etdescription = findViewById(id.etdescription)
         etdate = findViewById(id.etdate)
         eturl = findViewById(id.eturl)
+        etsino = findViewById(id.etsino)
         btnpost = findViewById(id.btnpost)
         btn_clock = findViewById(id.btn_clock)
 
@@ -74,9 +76,10 @@ class post : AppCompatActivity(), View.OnClickListener {
                 var db_description = etdescription.text.toString()
                 var db_date = etdate.text.toString()
                 var db_url = eturl.text.toString()
+                var db_sino = etsino.text.toString()
 
 
-                saveFireStore(db_title,db_description,db_date,db_url)
+                saveFireStore(db_title,db_description,db_date,db_url,db_sino)
 
 
 
@@ -107,13 +110,14 @@ class post : AppCompatActivity(), View.OnClickListener {
 
     }
 
-    private fun saveFireStore(dbTitle: String, dbDescription: String, dbDate: String,dburl :String) {
+    private fun saveFireStore(dbTitle: String, dbDescription: String, dbDate: String,dburl :String,dbsino : String) {
         val db =FirebaseFirestore.getInstance()
         val posts : MutableMap<String,Any> = HashMap()
         posts["title"] = dbTitle
         posts["description"] = dbDescription
         posts["date"] = dbDate
         posts["url"]=dburl
+        posts["sino"]=dbsino
 
         db.collection("posts")
             .add(posts)
@@ -123,6 +127,7 @@ class post : AppCompatActivity(), View.OnClickListener {
                 etdescription.setText("")
                 etdate.setText("")
                 eturl.setText("")
+                etsino.setText("")
             }
             .addOnFailureListener{
                 Toast.makeText(this, "record failed to add", Toast.LENGTH_SHORT).show()

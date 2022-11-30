@@ -17,6 +17,9 @@ class MyAdapter (private val postvalues :ArrayList<postvalues>) : RecyclerView.A
         val description : TextView = cardview.findViewById(R.id.txt_description)
         val date : TextView = cardview.findViewById(R.id.txt_date)
         val url : TextView = cardview.findViewById(R.id.txt_url)
+        val sino : TextView = cardview.findViewById(R.id.sino)
+
+
 
     }
 
@@ -32,6 +35,7 @@ class MyAdapter (private val postvalues :ArrayList<postvalues>) : RecyclerView.A
         holder.description.text = postvalues[position].description
         holder.date.text = postvalues[position].date
         holder.url.text = postvalues[position].url
+        holder.sino.text = postvalues[position].sino
     }
 
     override fun getItemCount(): Int {

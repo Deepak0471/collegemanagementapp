@@ -5,10 +5,10 @@
     <stroke android:width="2dp"/>
     <corners android:topRightRadius="20dp"
         android:topLeftRadius="20dp"/>
-    <stroke android:color="@color/material_dynamic_neutral95"/>
-    <gradient android:centerColor="@color/material_dynamic_neutral95"
-        android:endColor="@color/material_dynamic_neutral95"
-        android:startColor="@color/material_dynamic_neutral95"
+    <stroke android:color="@color/lightash"/>
+    <gradient android:centerColor="@color/lightash"
+        android:endColor="@color/lightash"
+        android:startColor="@color/lightash"
         />
 
 </shape>

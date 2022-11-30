@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 
+
 class studentlogin : AppCompatActivity(), View.OnClickListener {
     lateinit var mAuth: FirebaseAuth
     lateinit var txt_email: EditText
@@ -32,6 +33,20 @@ class studentlogin : AppCompatActivity(), View.OnClickListener {
         button.setOnClickListener(this)
 
         txt_register.setOnClickListener(this)
+
+        logincheck()
+    }
+
+    private fun logincheck() {
+        val user = FirebaseAuth.getInstance().currentUser
+        if (user != null) {
+            // User is signed in
+            val i = Intent(this, studentdashboard::class.java)
+            i.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(i)
+        } else {
+            // User is signed out
+        }
     }
 
     private fun login() {
