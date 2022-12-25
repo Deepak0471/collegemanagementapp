@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical"
     android:layout_gravity="center"
-    android:gravity="center">
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    >
 
 
     <ImageView
@@ -19,27 +20,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center">
+
         <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ADMIN"
-        android:textSize="25dp"
-        android:textColor="@color/black"
-        android:background="@drawable/background"
             android:id="@+id/btadmin"
-        />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background"
+            android:text="ADMIN"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+
         <View
             android:layout_width="5dp"
             android:layout_height="0dp" />
 
         <TextView
+            android:id="@+id/btstudent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="STUDENT"
-            android:textSize="25dp"
-            android:textColor="@color/black"
             android:background="@drawable/background"
-            android:id="@+id/btstudent"
+            android:text="STUDENT"
+            android:textColor="@color/black"
+            android:textSize="25dp"
 
             />
 
@@ -47,12 +49,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="100dp"/>
-
-
-
-
-
+        android:layout_height="100dp" />
 
 
 </LinearLayout>

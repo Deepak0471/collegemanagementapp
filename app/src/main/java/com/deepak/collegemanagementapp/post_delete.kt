@@ -1,15 +1,12 @@
 package com.deepak.collegemanagementapp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 
 class post_delete : AppCompatActivity() {
     lateinit var sirealno : EditText
@@ -23,11 +20,14 @@ class post_delete : AppCompatActivity() {
 
         deletebtn.setOnClickListener{
             val db = Firebase.firestore
+//            val x = sirealno
+            val y: String = sirealno.getText().toString()
+            val finalValue = y.toInt()
 
-            if(sirealno.text.toString().isNotEmpty()){
+            if(sirealno != null){
 
                 val query = db.collection("posts")
-                    .whereEqualTo("sino",sirealno.text.toString())
+                    .whereEqualTo("sino",finalValue)
                     .get()
                 query.addOnSuccessListener {
                     for (document in it){

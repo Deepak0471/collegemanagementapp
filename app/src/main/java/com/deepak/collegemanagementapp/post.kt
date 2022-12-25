@@ -1,7 +1,6 @@
 package com.deepak.collegemanagementapp
 
 import android.app.DatePickerDialog
-import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.text.method.LinkMovementMethod
@@ -76,10 +75,14 @@ class post : AppCompatActivity(), View.OnClickListener {
                 var db_description = etdescription.text.toString()
                 var db_date = etdate.text.toString()
                 var db_url = eturl.text.toString()
-                var db_sino = etsino.text.toString()
+                var db_sino = etsino.getText().toString()
+                val finalval_db_sino = db_sino.toInt()
+
+//                val x: String = db_sino
 
 
-                saveFireStore(db_title,db_description,db_date,db_url,db_sino)
+
+                saveFireStore(db_title,db_description,db_date,db_url,finalval_db_sino)
 
 
 
@@ -110,7 +113,7 @@ class post : AppCompatActivity(), View.OnClickListener {
 
     }
 
-    private fun saveFireStore(dbTitle: String, dbDescription: String, dbDate: String,dburl :String,dbsino : String) {
+    private fun saveFireStore(dbTitle: String, dbDescription: String, dbDate: String,dburl :String,dbsino : Int) {
         val db =FirebaseFirestore.getInstance()
         val posts : MutableMap<String,Any> = HashMap()
         posts["title"] = dbTitle

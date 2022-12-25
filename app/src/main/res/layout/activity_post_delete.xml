@@ -14,12 +14,15 @@
         android:textAllCaps="true"
         android:textColor="@color/red"
         android:textSize="25dp"/>
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="enter sireal number"
         android:layout_margin="20dp"
-        android:id="@+id/et_sino"/>
+        android:id="@+id/et_sino"
+        android:inputType="number"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

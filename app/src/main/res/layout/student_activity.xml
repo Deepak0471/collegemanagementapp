@@ -7,10 +7,10 @@
     tools:context=".studentdashboard">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/studentrecyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp"
-        android:id="@+id/studentrecyclerview"
-        tools:listitem="@layout/cradview"/>
+        tools:listitem="@layout/cradview" />
 </LinearLayout>
