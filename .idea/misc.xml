@@ -8,18 +8,21 @@
         <entry key="..\:/Users/deepak/AndroidStudioProjects/CollegeManagementapp/app/src/main/res/drawable/bgcolor.xml" value="0.247" />
         <entry key="..\:/Users/deepak/AndroidStudioProjects/CollegeManagementapp/app/src/main/res/drawable/downmenu.xml" value="0.247" />
         <entry key="..\:/Users/deepak/AndroidStudioProjects/CollegeManagementapp/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.2555" />
+        <entry key="..\:/Users/deepak/AndroidStudioProjects/CollegeManagementapp/app/src/main/res/drawable/ic_profile_background.xml" value="0.2555" />
+        <entry key="..\:/Users/deepak/AndroidStudioProjects/CollegeManagementapp/app/src/main/res/drawable/ic_profile_foreground.xml" value="0.2555" />
         <entry key="..\:/Users/deepak/AndroidStudioProjects/CollegeManagementapp/app/src/main/res/drawable/mainactivity_bg.xml" value="0.2545" />
         <entry key="..\:/Users/deepak/AndroidStudioProjects/CollegeManagementapp/app/src/main/res/layout/activity_adminlogin.xml" value="0.25" />
         <entry key="..\:/Users/deepak/AndroidStudioProjects/CollegeManagementapp/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/deepak/AndroidStudioProjects/CollegeManagementapp/app/src/main/res/layout/activity_post.xml" value="0.25" />
         <entry key="..\:/Users/deepak/AndroidStudioProjects/CollegeManagementapp/app/src/main/res/layout/activity_post_delete.xml" value="0.25" />
+        <entry key="..\:/Users/deepak/AndroidStudioProjects/CollegeManagementapp/app/src/main/res/layout/activity_post_fun.xml" value="0.176953125" />
         <entry key="..\:/Users/deepak/AndroidStudioProjects/CollegeManagementapp/app/src/main/res/layout/activity_studentlogin.xml" value="0.25" />
         <entry key="..\:/Users/deepak/AndroidStudioProjects/CollegeManagementapp/app/src/main/res/layout/activity_studentregister.xml" value="0.25" />
         <entry key="..\:/Users/deepak/AndroidStudioProjects/CollegeManagementapp/app/src/main/res/layout/admin_activity.xml" value="0.264" />
         <entry key="..\:/Users/deepak/AndroidStudioProjects/CollegeManagementapp/app/src/main/res/layout/cradview.xml" value="0.25" />
         <entry key="..\:/Users/deepak/AndroidStudioProjects/CollegeManagementapp/app/src/main/res/layout/delete_dailog.xml" value="0.25" />
         <entry key="..\:/Users/deepak/AndroidStudioProjects/CollegeManagementapp/app/src/main/res/layout/row_native_ad.xml" value="0.264" />
-        <entry key="..\:/Users/deepak/AndroidStudioProjects/CollegeManagementapp/app/src/main/res/layout/student_activity.xml" value="0.25" />
+        <entry key="..\:/Users/deepak/AndroidStudioProjects/CollegeManagementapp/app/src/main/res/layout/student_activity.xml" value="0.1875" />
       </map>
     </option>
   </component>

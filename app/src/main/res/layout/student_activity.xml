@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".studentdashboard">
+    tools:context=".studentdashboard"
+    android:orientation="vertical"
+    >
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/studentrecyclerview"
@@ -12,5 +14,49 @@
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp"
-        tools:listitem="@layout/cradview" />
+        tools:listitem="@layout/cradview"
+        android:layout_weight="0.8"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:id="@+id/bottomnav_studentdash"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_contacts_foreground"
+                android:id="@+id/studentdash_contacs"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_profile_foreground"
+                android:id="@+id/studentdash_profile"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_home_foreground"
+                android:id="@+id/studentdash_home"/>
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
 </LinearLayout>

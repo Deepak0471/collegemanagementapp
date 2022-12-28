@@ -1,10 +1,13 @@
 package com.deepak.collegemanagementapp
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.method.LinkMovementMethod
+import android.view.View
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -14,11 +17,12 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
-class studentdashboard : AppCompatActivity() {
+class studentdashboard : AppCompatActivity(), View.OnClickListener {
 
     lateinit var studentrecyclerview : RecyclerView
     lateinit var postvalues: ArrayList<postvalues>
     var db = Firebase.firestore
+    lateinit var home : ImageView
 
 
 
@@ -27,6 +31,8 @@ class studentdashboard : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.student_activity)
+
+        home = findViewById(R.id.studentdash_home)
 
 
         studentrecyclerview = findViewById(R.id.studentrecyclerview)
@@ -86,6 +92,20 @@ class studentdashboard : AppCompatActivity() {
             RequestConfiguration.Builder().setTestDeviceIds(listOf("ca-app-pub-3940256099942544/2247696110","ca-app-pub-3940256099942544/2247696110")).build()
         )
 
+        home.setOnClickListener(this)
+
 
     }
+
+    override fun onClick(v: View?) {
+        when(v?.id){
+
+            R.id.studentdash_home ->{
+
+               
+            }
+
+        }
+    }
+
 }
