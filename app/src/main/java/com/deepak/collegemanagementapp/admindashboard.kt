@@ -11,6 +11,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.ads.RequestConfiguration
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.*
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -27,6 +29,9 @@ class admindashboard : AppCompatActivity(), View.OnClickListener {
     lateinit var postvalues: ArrayList<postvalues>
     var db = Firebase.firestore
 
+    //image upload
+    lateinit var databaseReference : DatabaseReference
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.admin_activity)
@@ -34,6 +39,9 @@ class admindashboard : AppCompatActivity(), View.OnClickListener {
         posttxt = findViewById(R.id.txtpost)
         notiftxt = findViewById(R.id.txtNOTIF)
         deletetxt = findViewById(R.id.txtdelete)
+
+
+        val userId = FirebaseAuth.getInstance().currentUser!!.uid
 
         posttxt.setOnClickListener(this)
         notiftxt.setOnClickListener(this)
@@ -48,6 +56,8 @@ class admindashboard : AppCompatActivity(), View.OnClickListener {
 
 
         val productArrayList = ArrayList<postvalues>()
+
+
 
         db = FirebaseFirestore.getInstance()
         db.collection("posts")
@@ -67,23 +77,19 @@ class admindashboard : AppCompatActivity(), View.OnClickListener {
 
                     }
                 }
+
+
                 val adapterproduct = MyAdapter(this, productArrayList)
                 recyclerView.adapter = adapterproduct
-
-//                 recyclerView.adapter = MyAdapter.Holderproduct(postvalues)
-
-//                for (i in title.indices){
-//                    //add data to model
-//                    val x = postvalues(title = String(), description = String(), date = String(), url = String(), sino = String())
-//                    productArrayList.add(x)
-//                }
-
-
 
             }
             .addOnFailureListener {
                 Toast.makeText(this, it.toString(), Toast.LENGTH_SHORT).show()
             }
+
+
+
+
 
 
         MobileAds.initialize(this) { initstatus ->
@@ -99,6 +105,25 @@ class admindashboard : AppCompatActivity(), View.OnClickListener {
             ).build()
         )
 
+
+        databaseReference = FirebaseDatabase.getInstance().getReference(userId)
+        databaseReference.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if(snapshot.exists()){
+                    for (dataSnapshot in snapshot.children){
+                        val image = dataSnapshot.getValue(postvalues::class.java)
+                        productArrayList.add(postvalues(image.toString()))
+                    }
+                    val adapterproduct = MyAdapter(this@admindashboard, productArrayList)
+                    recyclerView.adapter = adapterproduct
+
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError){
+                Toast.makeText(this@admindashboard, "errorrrrrrr", Toast.LENGTH_SHORT).show()
+            }
+        })
 
     }
 

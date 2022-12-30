@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,75 +7,126 @@
     android:orientation="vertical"
     android:gravity="center">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="SIREAL NUMBER"
-        android:layout_margin="10dp"
-        android:id="@+id/etsino"
-        android:inputType="number"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="TITLE"
-        android:id="@+id/ettitle"
-        android:layout_margin="10dp"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="DESCRPTION"
-        android:id="@+id/etdescription"
-        android:inputType="textMultiLine"
-        android:lines="5"
-        android:gravity="top"
-        android:layout_margin="10dp"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="url(link)"
-        android:layout_margin="10dp"
-        android:id="@+id/eturl"
-        />
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="10dp"
-        >
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:padding="10dp"
+                android:id="@+id/imageview"
+                android:background="@drawable/background"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="your image appears here"
+                android:layout_gravity="center"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+        </FrameLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"/>
+
         <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="enter omage title"
+            android:id="@+id/et_title"
+            android:layout_margin="10dp"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"/>
+
+
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="datetime"
-            android:id="@+id/etdate"
-            android:layout_weight="0.8"/>
-        <ImageButton
-            android:layout_width="wrap_content"
+            android:text="selectimage"
+            android:id="@+id/btn_select"
+            android:layout_gravity="center"/>
+
+        <EditText
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/clock_icon"
-            android:id="@+id/btn_clock"
+            android:hint="SIREAL NUMBER"
+            android:layout_margin="10dp"
+            android:id="@+id/etsino"
+            android:inputType="number"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="TITLE"
+            android:id="@+id/ettitle"
+            android:layout_margin="10dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="DESCRPTION"
+            android:id="@+id/etdescription"
+            android:inputType="textMultiLine"
+            android:lines="5"
+            android:gravity="top"
+            android:layout_margin="10dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="url(link)"
+            android:layout_margin="10dp"
+            android:id="@+id/eturl"
             />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            >
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="datetime"
+                android:id="@+id/etdate"
+                android:layout_weight="0.8"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/clock_icon"
+                android:id="@+id/btn_clock"
+                />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="POST"
+            android:textColor="@color/black"
+            android:background="@drawable/background"
+            android:textSize="20dp"
+            android:id="@+id/btnpost"
+            android:layout_gravity="center"/>
 
 
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="POST"
-        android:textColor="@color/black"
-        android:background="@drawable/background"
-        android:textSize="20dp"
-        android:id="@+id/btnpost"/>
 
 
 
 
-
-
-
-
-
-
-</LinearLayout>
+</ScrollView>

@@ -1,12 +1,17 @@
 package com.deepak.collegemanagementapp
 
 import android.content.Context
+import android.icu.number.NumberFormatter.with
+import android.icu.number.NumberRangeFormatter.with
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.GenericTransitionOptions.with
+import com.bumptech.glide.Glide
+import com.bumptech.glide.Glide.with
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdLoader
 import com.google.android.gms.ads.AdRequest
@@ -15,6 +20,7 @@ import com.google.android.gms.ads.nativead.MediaView
 import com.google.android.gms.ads.nativead.NativeAd
 import com.google.android.gms.ads.nativead.NativeAdOptions
 import com.google.android.gms.ads.nativead.NativeAdView
+import com.squareup.picasso.Picasso
 
 class MyAdapter(val context: Context, private val postvalues: ArrayList<postvalues>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -37,6 +43,10 @@ class MyAdapter(val context: Context, private val postvalues: ArrayList<postvalu
         val date: TextView = itemview.findViewById(R.id.txt_date)
         val url: TextView = itemview.findViewById(R.id.txt_url)
         val sino: TextView = itemview.findViewById(R.id.sino)
+
+        //imageupload
+        val item_image : ImageView = itemView.findViewById(R.id.rv_image)
+
 
     }
 
@@ -89,6 +99,9 @@ class MyAdapter(val context: Context, private val postvalues: ArrayList<postvalu
             val date = model.date
             val url = model.url
             val sino = model.sino
+            val url1 = model.url1
+
+
 
 
 
@@ -100,6 +113,12 @@ class MyAdapter(val context: Context, private val postvalues: ArrayList<postvalu
             holderproduct.date.text = date
             holderproduct.url.text = url
             holderproduct.sino.setText(""+sino)
+
+
+            //image upload
+//            Glide.with(context).load(postvalues[position].url1).into(holderproduct.item_image)
+            Picasso.get().load(url1).into(holderproduct.item_image)
+//            with(context).load(ImageURL).into(imageView);
 
 
 

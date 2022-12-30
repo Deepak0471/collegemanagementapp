@@ -5,5 +5,7 @@ data class postvalues(
     var description: String? = null,
     var date: String? = null,
     var url: String? = null,
-    var sino: Int? = null
+    var sino: Int? = null,
+    val url1 : String? =null
+
 )
